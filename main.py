@@ -1,9 +1,14 @@
-pares = 0
+hora_inicial = int(input('Hora inicial: '))
+minuto_inicial = int(input('Minuto inicial: '))
+hora_final = int(input('Hora final: '))
+minuto_final = int(input('Minuto final: '))
 
-for i in range(5):
-    num = int(input('Digite um número inteiro: '))
+minuto_inicial += hora_inicial*60
+minuto_final += hora_final*60
 
-    if num % 2 == 0:
-        pares += 1
+tempo = minuto_final - minuto_inicial
 
-print(f'Foram digitados {pares} números pares')
+hora = tempo // 60
+minuto = tempo % 60
+
+print(f'O jogo durou {hora} horas e {minuto} minutos')
